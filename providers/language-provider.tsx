@@ -1,7 +1,7 @@
 "use client";
 
 import { Locale } from "@/types/types";
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 export const LANGUAGE_OPTIONS = [
     { value: "en", label: "EN" },
@@ -44,14 +44,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setLanguageState(value);
         window.localStorage.setItem(STORAGE_KEY, value);
     };
-
-    const value = useMemo(
-        () => ({
-            language,
-            setLanguage,
-        }),
-        [language],
-    );
 
     useEffect(() => {
         setLanguageState(resolveStoredLanguage());

@@ -1,44 +1,42 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import Image from "next/image";
 
 export const Footer = () => {
     return (
-        <footer className="bg-(--secondary) text-(--bg-dark) py-12">
+        <footer className="bg-(--bg-dark) text-(--text-dark) py-12">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     <div className="col-span-2">
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="w-10 h-10 bg-(--primary) rounded-lg flex items-center justify-center">
-                                <span className="text-(--text-light) font-bold text-lg">CP</span>
+                                <span className="text-(--text) font-bold text-lg">CP</span>
                             </div>
                             <span className="text-xl font-bold">Car Paintshop</span>
                         </div>
-                        <p className="text-(--bg-dark)/80 max-w-md">
-                            Professional automotive paint services with over 15 years of experience.
-                            We&apos;re passionate about making your car look perfect.
+                        <p className="max-w-md">
+                            Professional automotive paint services with over 15 years of experience. We&apos;re passionate about making your car look perfect.
                         </p>
                     </div>
 
                     <div>
                         <h3 className="font-bold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            <li><a href="#services" className="text-(--bg-dark)/80 hover:text-(--primary) transition-smooth">Services</a></li>
-                            <li><a href="#gallery" className="text-(--bg-dark)/80 hover:text-(--primary) transition-smooth">Gallery</a></li>
-                            <li><a href="#about" className="text-(--bg-dark)/80 hover:text-(--primary) transition-smooth">About Us</a></li>
-                            <li><a href="#contact" className="text-(--bg-dark)/80 hover:text-(--primary) transition-smooth">Contact</a></li>
+                            <li><a href="#services" className="hover:text-(--primary) transition-smooth">Services</a></li>
+                            <li><a href="#gallery" className="hover:text-(--primary) transition-smooth">Gallery</a></li>
+                            <li><a href="#about" className="hover:text-(--primary) transition-smooth">About Us</a></li>
+                            <li><a href="#contact" className="hover:text-(--primary) transition-smooth">Contact</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="font-bold mb-4">Follow Us</h3>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-(--primary)/10 rounded-lg flex items-center justify-center hover:bg-(--primary) transition-smooth group">
-                                <Facebook className="w-5 h-5 text-(--primary) group-hover:text-(--text-light) transition-smooth" />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-(--primary)/10 rounded-lg flex items-center justify-center hover:bg-(--primary) transition-smooth group">
-                                <Instagram className="w-5 h-5 text-(--primary) group-hover:text-(--text-light) transition-smooth" />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-(--primary)/10 rounded-lg flex items-center justify-center hover:bg-(--primary) transition-smooth group">
-                                <Twitter className="w-5 h-5 text-(--primary) group-hover:text-(--text-light) transition-smooth" />
+                            <a href="#" className="w-10 h-10 bg-(--bg-light)/80 rounded-lg flex items-center justify-center hover:bg-(--bg-light)/40 transition-smooth group">
+                                <Image
+                                    src="/instagram.png"
+                                    alt="Instagram"
+                                    width={24}
+                                    height={24}
+                                />
                             </a>
                         </div>
                     </div>

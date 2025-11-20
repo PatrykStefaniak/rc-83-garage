@@ -1,5 +1,5 @@
 export function Gallery() {
-    return (
+    return (false &&
         <section className="space-y-6" id="gallery">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>

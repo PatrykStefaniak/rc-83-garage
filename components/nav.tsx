@@ -23,7 +23,7 @@ export const Navbar = () => {
                     {/* Logo */}
                     <a href="#home" className="flex items-center space-x-2 group">
                         <div className="w-10 h-10 bg-(--primary) rounded-lg flex items-center justify-center shadow-glow transition-smooth group-hover:scale-110">
-                            <span className="text-(--text-light) font-bold text-lg">CP</span>
+                            <span className="text-(--text) font-bold text-lg">CP</span>
                         </div>
                         <span className="text-xl font-bold text-(--text) hidden sm:inline">
                             Car Paintshop
