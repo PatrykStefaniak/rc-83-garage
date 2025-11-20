@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-    --bg-dark: oklch(0.1 0.045 238);
-  --bg: oklch(0.15 0.045 238);
-  --bg-light: oklch(0.2 0.045 238);
-  --text-dark: oklch(0.76 0.09 238);
-  --text: oklch(0.92 0.09 238);
-  --text-light: oklch(1 0.09 238);
-  --border-dark: oklch(0.3 0.09 238);
-  --border: oklch(0.4 0.09 238);
-  --border-light: oklch(0.5 0.09 238);
-  --highlight: oklch(0.5 0.09 238);
-  --primary: oklch(0.76 0.1 238);
-  --secondary: oklch(0.76 0.1 58);
-  --danger: oklch(0.7 0.09 30);
-  --warning: oklch(0.7 0.09 100);
-  --success: oklch(0.7 0.09 160);
-  --info: oklch(0.7 0.09 260);
+    --bg-light: oklch(0.2336 0.0186 248.63);
+    --bg: oklch(0.1897 0.0157 248.66);
+    --bg-dark: oklch(0.1552 0.0121 248.07);
+    --text-light: oklch(0.7181 0.0247 248.17);
+    --text: oklch(0.9220 0.0053 247.88);
+    --text-dark: oklch(1 0 89.88);
+    --border-light: oklch(0.2961 0.0210 248.54);
+    --border: oklch(0.3356 0.0249 248.57);
+    --border-dark: oklch(0.3928 0.0305 248.61);
+    /* --bg-dark: oklch(0.1 0.045 238);
+    --bg: oklch(0.15 0.045 238);
+    --bg-light: oklch(0.2 0.045 238);
+    --text-dark: oklch(0.76 0.09 238);
+    --text: oklch(0.92 0.09 238);
+    --text-light: oklch(1 0.09 238);
+    --border-dark: oklch(0.3 0.09 238);
+    --border: oklch(0.4 0.09 238);
+    --border-light: oklch(0.5 0.09 238); */
+    --highlight: oklch(0.5 0.09 238);
+    --primary: oklch(0.76 0.1 238);
+    --secondary: oklch(0.76 0.1 58);
+    --danger: oklch(0.7 0.09 30);
+    --warning: oklch(0.7 0.09 100);
+    --success: oklch(0.7 0.09 160);
+    --info: oklch(0.7 0.09 260);
 }
 
 body.light {
-    --bg-dark: oklch(0.8 0.045 238);
+    --bg-light: oklch(0.9841 0.0026 247.85);
+    --bg: oklch(1.0000 0.0000 89.88);
+    --bg-dark: oklch(0.9686 0.0035 247.86);
+    --text-light: oklch(0.6331 0.0327 248.34);
+    --text: oklch(0.2717 0.0916 252.69);
+    --text-dark: oklch(0.2049 0.1470 235.73);
+    --border-light: oklch(0.9369 0.0070 247.90);
+    --border: oklch(0.8809 0.0134 247.98);
+    --border-dark: oklch(0.7982 0.0286 248.19);
+    /* --bg-dark: oklch(0.8 0.045 238);
     --bg: oklch(0.9 0.045 238);
     --bg-light: oklch(1 0.045 238);
     --text-light: oklch(0.13 0.09 238);
@@ -28,7 +46,7 @@ body.light {
     --text-dark: oklch(0.4 0.09 238);
     --border-dark: oklch(0.7 0.09 238);
     --border: oklch(0.6 0.09 238);
-    --border-light: oklch(0.5 0.09 238);
+    --border-light: oklch(0.5 0.09 238); */
     --highlight: oklch(1 0.09 238);
     --primary: oklch(0.4 0.1 238);
     --secondary: oklch(0.4 0.1 58);

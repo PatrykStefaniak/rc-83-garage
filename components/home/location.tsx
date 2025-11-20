@@ -2,13 +2,13 @@ import { MapPin, Phone, Clock } from "lucide-react";
 
 export const Location = () => {
     return (
-        <section id="contact" className="py-24 bg-background">
+        <section id="contact" className="py-24 bg-(--bg)">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-text-dark mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-(--text-dark) mb-4">
                         Visit Our Shop
                     </h2>
-                    <p className="text-xl text-text-light max-w-2xl mx-auto">
+                    <p className="text-xl text-(--text-light) max-w-2xl mx-auto">
                         Come see us for a free consultation and quote
                     </p>
                 </div>
@@ -30,14 +30,14 @@ export const Location = () => {
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <div className="p-6 bg-card border-border hover:border-primary transition-smooth">
+                        <div className="p-6 bg-(--bg) border-(--border) hover:border-(--primary) transition-smooth">
                             <div className="flex items-start space-x-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <MapPin className="w-6 h-6 text-primary" />
+                                <div className="w-12 h-12 bg-(--primary)/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <MapPin className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-card-foreground mb-2">Address</h3>
-                                    <p className="text-muted-foreground">
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Address</h3>
+                                    <p className="text-(--text)">
                                         123 Paint Street<br />
                                         00-001 Warsaw, Poland
                                     </p>
@@ -45,14 +45,14 @@ export const Location = () => {
                             </div>
                         </div>
 
-                        <div className="p-6 bg-card border-border hover:border-primary transition-smooth">
+                        <div className="p-6 bg-(--bg) border-(--border) hover:border-(--primary) transition-smooth">
                             <div className="flex items-start space-x-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Phone className="w-6 h-6 text-primary" />
+                                <div className="w-12 h-12 bg-(--primary)/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <Phone className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-card-foreground mb-2">Contact</h3>
-                                    <p className="text-muted-foreground">
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Contact</h3>
+                                    <p className="text-(--text)">
                                         Phone: +48 123 456 789<br />
                                         Email: info@carpaintshop.com
                                     </p>
@@ -60,14 +60,14 @@ export const Location = () => {
                             </div>
                         </div>
 
-                        <div className="p-6 bg-card border-border hover:border-primary transition-smooth">
+                        <div className="p-6 bg-(--bg) border-(--border) hover:border-(--primary) transition-smooth">
                             <div className="flex items-start space-x-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <Clock className="w-6 h-6 text-primary" />
+                                <div className="w-12 h-12 bg-(--primary)/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <Clock className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-card-foreground mb-2">Hours</h3>
-                                    <p className="text-muted-foreground">
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Hours</h3>
+                                    <p className="text-(--text)">
                                         Monday - Friday: 8:00 AM - 6:00 PM<br />
                                         Saturday: 9:00 AM - 4:00 PM<br />
                                         Sunday: Closed

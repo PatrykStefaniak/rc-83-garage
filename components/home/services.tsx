@@ -25,13 +25,13 @@ const services = [
 
 export const Services = () => {
     return (
-        <section id="services" className="py-24 bg-bg-dark">
+        <section id="services" className="py-24 bg-(--bg-dark)">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-text-dark mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-(--text-dark) mb-4">
                         Our Services
                     </h2>
-                    <p className="text-xl text-text-light max-w-2xl mx-auto">
+                    <p className="text-xl text-(--text-light) max-w-2xl mx-auto">
                         Professional automotive paint services tailored to your needs
                     </p>
                 </div>
@@ -40,15 +40,15 @@ export const Services = () => {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="p-6 bg-card border-border hover:border-primary transition-smooth hover:shadow-glow group cursor-pointer"
+                            className="p-6 bg-(--bg) border-(--border) hover:border-(--primary) transition-smooth hover:shadow-glow group cursor-pointer"
                         >
-                            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-smooth">
-                                <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-smooth" />
+                            <div className="w-12 h-12 bg-(--primary)/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-(--primary) transition-smooth">
+                                <service.icon className="w-6 h-6 text-(--primary) group-hover:text-(--text-light) transition-smooth" />
                             </div>
-                            <h3 className="text-xl font-bold text-card-foreground mb-2">
+                            <h3 className="text-xl font-bold text-(--text-light) mb-2">
                                 {service.title}
                             </h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="text-(--text) leading-relaxed">
                                 {service.description}
                             </p>
                         </div>
