@@ -19,24 +19,25 @@ type LanguageContextValue = {
 type Translations = Record<string, unknown>;
 
 const STORAGE_KEY = "rc83-language";
+const DEFAULT_LANGUAGE = "es";
 
 const resolveStoredLanguage = (): Locale => {
     if (typeof window === "undefined") {
-        return "en";
+        return DEFAULT_LANGUAGE;
     }
 
     const stored = window.localStorage.getItem(STORAGE_KEY) as Locale | null;
 
     return LANGUAGE_OPTIONS.some((option) => option.value === stored) && stored
         ? stored
-        : "en";
+        : DEFAULT_LANGUAGE;
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [language, setLanguageState] = useState<Locale>("es");
+    const [language, setLanguageState] = useState<Locale>(DEFAULT_LANGUAGE);
     const [isLoading, setIsLoading] = useState(true);
     const [translations, setTranslations] = useState<Translations>({});
 
