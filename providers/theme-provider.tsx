@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         if (typeof document !== "undefined") {
-            document.body.classList.toggle("light", theme === "light");
+            document.body.classList.toggle("dark", theme === "dark");
         }
         if (typeof window !== "undefined") {
             window.localStorage.setItem(STORAGE_KEY, theme);
