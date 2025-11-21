@@ -1,11 +1,7 @@
 "use client";
 
 import { Locale } from "@/types/types";
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import enTranslations from "@/messages/en.json";
-import esTranslations from "@/messages/es.json";
-import plTranslations from "@/messages/pl.json";
-import { Loader2 } from "lucide-react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 export const LANGUAGE_OPTIONS = [
     { value: "en", label: "EN" },
@@ -24,8 +20,6 @@ type Translations = Record<string, unknown>;
 
 const STORAGE_KEY = "rc83-language";
 
-let translations: Record<string, string> = {};
-
 const resolveStoredLanguage = (): Locale => {
     if (typeof window === "undefined") {
         return "en";
@@ -38,36 +32,18 @@ const resolveStoredLanguage = (): Locale => {
         : "en";
 };
 
-const getNestedValue = (obj: Translations, path: string): string => {
-    const keys = path.split(".");
-    let current: unknown = obj;
-
-    for (const key of keys) {
-        if (current && typeof current === "object" && key in current) {
-            current = (current as Record<string, unknown>)[key];
-        } else {
-            return path;
-        }
-    }
-
-    return typeof current === "string" ? current : path;
-};
-
-const t = (key: string): string => {
-    return getNestedValue(translations, key);
-};
-
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
     const [language, setLanguageState] = useState<Locale>("en");
     const [isLoading, setIsLoading] = useState(true);
+    const [translations, setTranslations] = useState<Translations>({});
 
-    const setLanguage = (value: Locale) => {
+    const setLanguage = useCallback((value: Locale) => {
         setLanguageState(value);
         window.localStorage.setItem(STORAGE_KEY, value);
-    };
+    }, []);
 
     useEffect(() => {
         setLanguageState(resolveStoredLanguage());
@@ -77,13 +53,32 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setIsLoading(true);
 
         import(`@/messages/${language}.json`).then((module) => {
-            translations = module.default;
+            setTranslations(module.default);
             setIsLoading(false);
         });
     }, [language]);
 
+    const t = useCallback((path: string): string => {
+        const keys = path.split(".");
+        let current: unknown = translations;
+
+        for (const key of keys) {
+            if (current && typeof current === "object" && key in current) {
+                current = (current as Record<string, unknown>)[key];
+            } else {
+                return path;
+            }
+        }
+
+        return typeof current === "string" ? current : path;
+    }, [translations]);
+
+    const value = useMemo(() => (
+        {language, setLanguage, t, isLoading}
+    ), [language, setLanguage, t, isLoading]);
+
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, t, isLoading }}>
+        <LanguageContext.Provider value={value}>
             {children}
         </LanguageContext.Provider>
     );
