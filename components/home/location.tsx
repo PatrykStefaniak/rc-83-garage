@@ -1,15 +1,20 @@
+"use client";
+
 import { MapPin, Phone, Clock } from "lucide-react";
+import { useLanguage } from "@/providers/language-provider";
 
 export const Location = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="contact" className="py-24 bg-(--bg)">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-(--text-dark) mb-4">
-                        Visit Our Shop
+                        {t("home.location.title")}
                     </h2>
                     <p className="text-xl text-(--text-light) max-w-2xl mx-auto">
-                        Come see us for a free consultation and quote
+                        {t("home.location.description")}
                     </p>
                 </div>
 
@@ -36,10 +41,10 @@ export const Location = () => {
                                     <MapPin className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Address</h3>
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">{t("home.location.address.label")}</h3>
                                     <p className="text-(--text)">
-                                        123 Paint Street<br />
-                                        00-001 Warsaw, Poland
+                                        {t("home.location.address.street")}<br />
+                                        {t("home.location.address.city")}
                                     </p>
                                 </div>
                             </div>
@@ -51,10 +56,10 @@ export const Location = () => {
                                     <Phone className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Contact</h3>
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">{t("home.location.contact.label")}</h3>
                                     <p className="text-(--text)">
-                                        Phone: +48 123 456 789<br />
-                                        Email: info@carpaintshop.com
+                                        {t("home.location.contact.phone")}<br />
+                                        {t("home.location.contact.email")}
                                     </p>
                                 </div>
                             </div>
@@ -66,11 +71,11 @@ export const Location = () => {
                                     <Clock className="w-6 h-6 text-(--primary)" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">Hours</h3>
+                                    <h3 className="text-lg font-bold text-(--text-light) mb-2">{t("home.location.hours.label")}</h3>
                                     <p className="text-(--text)">
-                                        Monday - Friday: 8:00 AM - 6:00 PM<br />
-                                        Saturday: 9:00 AM - 4:00 PM<br />
-                                        Sunday: Closed
+                                        {t("home.location.hours.weekdays")}<br />
+                                        {t("home.location.hours.saturday")}<br />
+                                        {t("home.location.hours.sunday")}
                                     </p>
                                 </div>
                             </div>

@@ -2,19 +2,21 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/providers/language-provider";
 import { ThemeToggle } from "./ui/theme-toggle";
 import { LanguageSwitcher } from "./ui/language-switcher";
 
-const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
-];
-
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { t } = useLanguage();
+
+    const navItems = [
+        { label: t("nav.home"), href: "#home" },
+        { label: t("nav.services"), href: "#services" },
+        { label: t("nav.gallery"), href: "#gallery" },
+        { label: t("nav.about"), href: "#about" },
+        { label: t("nav.contact"), href: "#contact" },
+    ];
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-(--bg)/80 backdrop-blur-lg border-b border-(--border-light)">
@@ -26,7 +28,7 @@ export const Navbar = () => {
                             <span className="text-(--text) font-bold text-lg">CP</span>
                         </div>
                         <span className="text-xl font-bold text-(--text) hidden sm:inline">
-                            Car Paintshop
+                            {t("nav.brand")}
                         </span>
                     </a>
 

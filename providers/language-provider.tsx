@@ -2,6 +2,10 @@
 
 import { Locale } from "@/types/types";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import enTranslations from "@/messages/en.json";
+import esTranslations from "@/messages/es.json";
+import plTranslations from "@/messages/pl.json";
+import { Loader2 } from "lucide-react";
 
 export const LANGUAGE_OPTIONS = [
     { value: "en", label: "EN" },
@@ -12,8 +16,11 @@ export const LANGUAGE_OPTIONS = [
 type LanguageContextValue = {
     language: Locale;
     setLanguage: (locale: Locale) => void;
-    translate: (key: string) => string;
+    t: (key: string) => string;
+    isLoading: boolean;
 };
+
+type Translations = Record<string, unknown>;
 
 const STORAGE_KEY = "rc83-language";
 
@@ -31,14 +38,31 @@ const resolveStoredLanguage = (): Locale => {
         : "en";
 };
 
-const translate = (key: string) => {
-    return translations[key] || key;
+const getNestedValue = (obj: Translations, path: string): string => {
+    const keys = path.split(".");
+    let current: unknown = obj;
+
+    for (const key of keys) {
+        if (current && typeof current === "object" && key in current) {
+            current = (current as Record<string, unknown>)[key];
+        } else {
+            return path;
+        }
+    }
+
+    return typeof current === "string" ? current : path;
+};
+
+const t = (key: string): string => {
+    return getNestedValue(translations, key);
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
     const [language, setLanguageState] = useState<Locale>("en");
+    const [isLoading, setIsLoading] = useState(true);
 
     const setLanguage = (value: Locale) => {
         setLanguageState(value);
@@ -50,18 +74,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }, []);
 
     useEffect(() => {
-        if (language === "en") {
-            translations = {}
-            return;
-        }
+        setIsLoading(true);
 
-        import(`@/public/i18n/${language}.json`).then((module) => {
+        import(`@/messages/${language}.json`).then((module) => {
             translations = module.default;
+            setIsLoading(false);
         });
     }, [language]);
 
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, translate }}>
+        <LanguageContext.Provider value={{ language, setLanguage, t, isLoading }}>
             {children}
         </LanguageContext.Provider>
     );

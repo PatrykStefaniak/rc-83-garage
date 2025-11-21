@@ -1,52 +1,57 @@
-import { Sparkles, Shield, Palette, Zap, PaintBucket } from "lucide-react";
+"use client";
 
-const services = [
-    {
-        icon: Palette,
-        title: "Custom Paint Jobs",
-        description: "From classic colors to custom designs, we create stunning finishes that match your vision perfectly.",
-    },
-    {
-        icon: Shield,
-        title: "Paint Protection",
-        description: "Advanced ceramic coatings and protective films to keep your paint looking showroom fresh for years.",
-    },
-    {
-        icon: PaintBucket,
-        title: "Paint Correction",
-        description: "Remove scratches, swirls, and imperfections with our multi-stage paint correction process.",
-    },
-    {
-        icon: Zap,
-        title: "Quick Touch-ups",
-        description: "Fast and professional repairs for minor scratches, chips, and paint damage. In and out in hours.",
-    },
-];
+import { Sparkles, Shield, Palette, Zap, PaintBucket } from "lucide-react";
+import { useLanguage } from "@/providers/language-provider";
 
 export const Services = () => {
+    const { t } = useLanguage();
+
+    const services = [
+        {
+            icon: Palette,
+            titleKey: "home.services.items.customPaint.title",
+            descriptionKey: "home.services.items.customPaint.description",
+        },
+        {
+            icon: Shield,
+            titleKey: "home.services.items.paintProtection.title",
+            descriptionKey: "home.services.items.paintProtection.description",
+        },
+        {
+            icon: PaintBucket,
+            titleKey: "home.services.items.paintCorrection.title",
+            descriptionKey: "home.services.items.paintCorrection.description",
+        },
+        {
+            icon: Zap,
+            titleKey: "home.services.items.quickTouchups.title",
+            descriptionKey: "home.services.items.quickTouchups.description",
+        },
+    ];
+
     return (
         <section id="services" className="py-24 bg-(--bg-dark)">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center text-center mb-16 gap-6">
                     <h2 className="text-4xl md:text-5xl font-bold text-(--text-dark)">
-                        Our Services
+                        {t("home.services.title")}
                     </h2>
                     <p className="text-xl text-(--text-light) max-w-2xl mx-auto">
-                        Professional automotive paint services tailored to your needs
+                        {t("home.services.description")}
                     </p>
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-(--primary)/10 border border-(--primary)/20 rounded-full">
                         <Sparkles
                             color="var(--warning)"
                             size={24}
                         />
-                        <span className="text-sm font-medium text-(--primary)">Premium Auto Paint Services</span>
+                        <span className="text-sm font-medium text-(--primary)">{t("home.services.badge")}</span>
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {
-                        services.map((service) => (
+                        services.map((service, index) => (
                             <div
-                                key={service.title}
+                                key={index}
                                 className="p-6 bg-(--bg) rounded-lg transition-smooth hover:shadow-[0_0_10px_var(--primary)] group cursor-default"
                             >
                                 <div className="hover:scale-105 transition-transform duration-500 ease-in-out">
@@ -57,10 +62,10 @@ export const Services = () => {
                                         />
                                     </div>
                                     <h3 className="text-xl font-bold text-(--text-light) mb-2">
-                                        {service.title}
+                                        {t(service.titleKey)}
                                     </h3>
                                     <p className="text-(--text) leading-relaxed">
-                                        {service.description}
+                                        {t(service.descriptionKey)}
                                     </p>
                                 </div>
                             </div>
