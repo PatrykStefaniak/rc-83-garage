@@ -65,7 +65,8 @@
         },
         "gallery": {
             "title": "Galeria",
-            "description": "Opis"
+            "label": "Nasza Praca",
+            "description": "Poznaj nasze portfolio oszałamiających prac lakierniczych i profesjonalnych wykończeń samochodowych. Każdy projekt pokazuje nasze zaangażowanie w jakość i dbałość o szczegóły."
         }
     },
     "footer": {

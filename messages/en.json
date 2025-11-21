@@ -65,7 +65,8 @@
         },
         "gallery": {
             "title": "Gallery",
-            "description": "Description"
+            "label": "Our Work",
+            "description": "Explore our portfolio of stunning paint jobs and professional automotive finishes. Each project showcases our commitment to quality and attention to detail."
         }
     },
     "footer": {

@@ -65,7 +65,8 @@
         },
         "gallery": {
             "title": "Galería",
-            "description": "Descripción"
+            "label": "Nuestro Trabajo",
+            "description": "Explora nuestro portafolio de trabajos de pintura impresionantes y acabados profesionales automotrices. Cada proyecto muestra nuestro compromiso con la calidad y atención al detalle."
         }
     },
     "footer": {
