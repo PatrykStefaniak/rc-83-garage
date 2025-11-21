@@ -18,7 +18,7 @@ export const Hero = () => {
                     alt="Professional car paintwork"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-r from-(--bg) via-(--bg-light)/95 to-(transparent)" />
+                <div className="absolute inset-0 bg-linear-to-r from-(--bg) via-75% sm:via-50% via-(--bg-light)/93 sm:via-(--bg-light)/95 to-(transparent)" />
             </div>
 
             {/* Content */}
