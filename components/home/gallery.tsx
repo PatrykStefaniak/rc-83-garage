@@ -13,17 +13,15 @@ export function Gallery() {
     const { t } = useLanguage();
 
     return (
-        <section className="py-24" id="gallery">
-            <div className="container mx-auto px-4 space-y-6">
-                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                    <div>
-                        <h2 className="text-3xl font-bold text-(--text-dark)">
-                            {t("home.gallery.title")}
-                        </h2>
-                        <p className="text-xs font-bold uppercase tracking-[0.5em] text-(--secondary)">
-                            {t("home.gallery.label")}
-                        </p>
-                    </div>
+        <section className="py-24 bg-(--bg-dark)" id="gallery">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col items-center text-center mb-16 gap-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-(--text-dark)">
+                        {t("home.gallery.title")}
+                    </h2>
+                    <p className="text-xl text-(--text-light) max-w-2xl mx-auto">
+                        {t("home.gallery.description")}
+                    </p>
                 </div>
                 <div className="grid gap-4 md:grid-cols-3">
                     <GalleryImage
