@@ -1,11 +1,12 @@
 "use client";
 
-import { Navbar } from "../nav";
+import { Navbar } from "../ui/nav";
 import { Hero } from "./hero";
 import { Services } from "./services";
+import { Testimonials } from "./testimonials";
 import { Gallery } from "./gallery";
 import { Location } from "./location";
-import { Footer } from "../footer";
+import { Footer } from "../ui/footer";
 import { useLanguage } from "@/providers/language-provider";
 import { Loader2 } from "lucide-react";
 
@@ -20,6 +21,7 @@ const Index = () => {
             <Navbar />
             <Hero />
             <Services />
+            <Testimonials />
             <Gallery />
             <Location />
             <Footer />

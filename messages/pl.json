@@ -3,6 +3,7 @@
         "brand": "Warsztat Lakierniczy",
         "home": "Strona Główna",
         "services": "Usługi",
+        "testimonials": "Opinie",
         "gallery": "Galeria",
         "about": "O Nas",
         "contact": "Kontakt"
@@ -67,6 +68,42 @@
             "title": "Galeria",
             "label": "Nasza Praca",
             "description": "Poznaj nasze portfolio oszałamiających prac lakierniczych i profesjonalnych wykończeń samochodowych. Każdy projekt pokazuje nasze zaangażowanie w jakość i dbałość o szczegóły."
+        },
+        "testimonials": {
+            "title": "Co Mówią Nasi Klienci",
+            "description": "Nie wierz nam tylko na słowo - posłuchaj naszych zadowolonych klientów",
+            "items": {
+                "0": {
+                    "name": "Michał Kowalski",
+                    "role": "Właściciel Samochodu Luksusowego",
+                    "content": "Absolutnie fenomenalna praca! Całkowicie zmienili mojego Mercedesa niestandardowym wykończeniem w kolorze nocnym błękicie. Dbałość o szczegóły i jakość pracy przewyższyły wszystkie moje oczekiwania. Gorąco polecam!"
+                },
+                "1": {
+                    "name": "Sara Nowak",
+                    "role": "Entuzjastka Klasycznych Samochodów",
+                    "content": "Przywiozłam tutaj mojego Mustanga z 1967 roku do pełnej renowacji lakieru. Zespół był kompetentny, profesjonalny, a rezultaty oszałamiające. Wygląda lepiej niż fabrycznie nowy!"
+                },
+                "2": {
+                    "name": "Dawid Wiśniewski",
+                    "role": "Właściciel Firmy",
+                    "content": "Po drobnym wypadku przywrócili lakier mojego samochodu idealnie. Nie można nawet zauważyć, że było uszkodzenie. Szybka realizacja i uczciwe ceny. Na pewno wrócę w przyszłości."
+                },
+                "3": {
+                    "name": "Emma Zielińska",
+                    "role": "Codzienny Kierowca",
+                    "content": "Zrobiłam tutaj powłokę ceramiczną i jestem zdumiona, jak łatwo jest teraz utrzymać mój samochód w czystości. Lakier wygląda błyszcząco i jak nowy nawet po miesiącach. Świetna inwestycja!"
+                },
+                "4": {
+                    "name": "Jakub Lewandowski",
+                    "role": "Kolekcjoner Samochodów",
+                    "content": "Przez lata korzystałem z wielu warsztatów lakierniczych, ale ten się wyróżnia. Ich wiedza w zakresie niestandardowych kolorów i wykończeń jest niezrównana. Każdy samochód, który dla mnie zrobili, był perfekcyjny."
+                },
+                "5": {
+                    "name": "Lidia Mazur",
+                    "role": "Właścicielka SUV-a",
+                    "content": "Potrzebowałam szybkiego retusu kilku zarysowań przed sprzedażą mojego samochodu. Przyjęli mnie szybko, a wyniki były doskonałe. Pomogło mi to uzyskać lepszą cenę przy sprzedaży!"
+                }
+            }
         }
     },
     "footer": {

@@ -3,8 +3,8 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/providers/language-provider";
-import { ThemeToggle } from "./ui/theme-toggle";
-import { LanguageSwitcher } from "./ui/language-switcher";
+import { ThemeToggle } from "./theme-toggle";
+import { LanguageSwitcher } from "./language-switcher";
 
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +13,7 @@ export const Navbar = () => {
     const navItems = [
         { label: t("nav.home"), href: "#home" },
         { label: t("nav.services"), href: "#services" },
+        { label: t("nav.testimonials"), href: "#testimonials" },
         { label: t("nav.gallery"), href: "#gallery" },
         { label: t("nav.about"), href: "#about" },
         { label: t("nav.contact"), href: "#contact" },

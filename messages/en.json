@@ -3,6 +3,7 @@
         "brand": "Car Paintshop",
         "home": "Home",
         "services": "Services",
+        "testimonials": "Testimonials",
         "gallery": "Gallery",
         "about": "About",
         "contact": "Contact"
@@ -67,6 +68,42 @@
             "title": "Gallery",
             "label": "Our Work",
             "description": "Explore our portfolio of stunning paint jobs and professional automotive finishes. Each project showcases our commitment to quality and attention to detail."
+        },
+        "testimonials": {
+            "title": "What Our Clients Say",
+            "description": "Don't just take our word for it - hear from our satisfied customers",
+            "items": {
+                "0": {
+                    "name": "Michael Rodriguez",
+                    "role": "Luxury Car Owner",
+                    "content": "Absolutely phenomenal work! They completely transformed my Mercedes with a custom midnight blue finish. The attention to detail and quality of work exceeded all my expectations. Highly recommended!"
+                },
+                "1": {
+                    "name": "Sarah Chen",
+                    "role": "Classic Car Enthusiast",
+                    "content": "I brought my 1967 Mustang here for a full restoration paint job. The team was knowledgeable, professional, and the results were stunning. It looks better than factory new!"
+                },
+                "2": {
+                    "name": "David Thompson",
+                    "role": "Business Owner",
+                    "content": "After a minor accident, they restored my car's paint perfectly. You can't even tell there was damage. Quick turnaround and fair pricing. Will definitely return for future needs."
+                },
+                "3": {
+                    "name": "Emma Wilson",
+                    "role": "Daily Commuter",
+                    "content": "Got a ceramic coating done here and I'm amazed at how easy it is to keep my car clean now. The paint looks glossy and new even after months. Great investment!"
+                },
+                "4": {
+                    "name": "James Patterson",
+                    "role": "Car Collector",
+                    "content": "I've used many paint shops over the years, but this one stands out. Their expertise in custom colors and finishes is unmatched. Every car they've done for me has been perfect."
+                },
+                "5": {
+                    "name": "Lisa Martinez",
+                    "role": "SUV Owner",
+                    "content": "Needed a quick touch-up on some scratches before selling my car. They fit me in quickly and the results were excellent. Helped me get a better price on the sale!"
+                }
+            }
         }
     },
     "footer": {

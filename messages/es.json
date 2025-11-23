@@ -3,6 +3,7 @@
         "brand": "Taller de Pintura",
         "home": "Inicio",
         "services": "Servicios",
+        "testimonials": "Testimonios",
         "gallery": "Galería",
         "about": "Acerca de",
         "contact": "Contacto"
@@ -67,6 +68,42 @@
             "title": "Galería",
             "label": "Nuestro Trabajo",
             "description": "Explora nuestro portafolio de trabajos de pintura impresionantes y acabados profesionales automotrices. Cada proyecto muestra nuestro compromiso con la calidad y atención al detalle."
+        },
+        "testimonials": {
+            "title": "Lo Que Dicen Nuestros Clientes",
+            "description": "No solo confíes en nuestra palabra - escucha a nuestros clientes satisfechos",
+            "items": {
+                "0": {
+                    "name": "Miguel Rodríguez",
+                    "role": "Propietario de Auto de Lujo",
+                    "content": "¡Trabajo absolutamente fenomenal! Transformaron completamente mi Mercedes con un acabado azul medianoche personalizado. La atención al detalle y la calidad del trabajo superaron todas mis expectativas. ¡Muy recomendado!"
+                },
+                "1": {
+                    "name": "Sara Chen",
+                    "role": "Entusiasta de Autos Clásicos",
+                    "content": "Traje mi Mustang 1967 aquí para un trabajo completo de restauración de pintura. El equipo fue conocedor, profesional y los resultados fueron impresionantes. ¡Se ve mejor que nuevo de fábrica!"
+                },
+                "2": {
+                    "name": "David Thompson",
+                    "role": "Dueño de Negocio",
+                    "content": "Después de un accidente menor, restauraron la pintura de mi auto perfectamente. Ni siquiera se nota que hubo daño. Entrega rápida y precios justos. Definitivamente regresaré para futuras necesidades."
+                },
+                "3": {
+                    "name": "Emma Wilson",
+                    "role": "Conductora Diaria",
+                    "content": "Me hice un recubrimiento cerámico aquí y estoy asombrada de lo fácil que es mantener mi auto limpio ahora. La pintura se ve brillante y nueva incluso después de meses. ¡Gran inversión!"
+                },
+                "4": {
+                    "name": "Jaime Patterson",
+                    "role": "Coleccionista de Autos",
+                    "content": "He usado muchos talleres de pintura a lo largo de los años, pero este se destaca. Su experiencia en colores y acabados personalizados es inigualable. Cada auto que me han hecho ha sido perfecto."
+                },
+                "5": {
+                    "name": "Lisa Martínez",
+                    "role": "Propietaria de SUV",
+                    "content": "Necesitaba un retoque rápido en algunos rayones antes de vender mi auto. Me atendieron rápidamente y los resultados fueron excelentes. ¡Me ayudó a obtener un mejor precio en la venta!"
+                }
+            }
         }
     },
     "footer": {
