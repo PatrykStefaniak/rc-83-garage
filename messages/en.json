@@ -113,5 +113,9 @@
         "followUs": "Follow Us",
         "instagram": "Instagram",
         "copyright": "© 2024 Car Paintshop. All rights reserved."
+    },
+    "gallery": {
+        "title": "Our Gallery",
+        "description": "Explore our portfolio of stunning paint jobs and professional automotive finishes. Each project showcases our commitment to quality and attention to detail."
     }
 }

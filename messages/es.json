@@ -113,5 +113,9 @@
         "followUs": "Síguenos",
         "instagram": "Instagram",
         "copyright": "© 2024 Taller de Pintura. Todos los derechos reservados."
+    },
+    "gallery": {
+        "title": "Nuestra Galería",
+        "description": "Explora nuestro portafolio de trabajos de pintura impresionantes y acabados profesionales automotrices. Cada proyecto muestra nuestro compromiso con la calidad y atención al detalle."
     }
 }

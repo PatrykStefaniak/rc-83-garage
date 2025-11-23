@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/providers/language-provider";
 
 export const Footer = () => {
@@ -25,10 +26,26 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-bold mb-4">{t("footer.quickLinks")}</h3>
                         <ul className="space-y-2">
-                            <li><a href="#services" className="hover:text-(--primary) transition-smooth">{t("nav.services")}</a></li>
-                            <li><a href="#gallery" className="hover:text-(--primary) transition-smooth">{t("nav.gallery")}</a></li>
-                            <li><a href="#about" className="hover:text-(--primary) transition-smooth">{t("nav.about")}</a></li>
-                            <li><a href="#contact" className="hover:text-(--primary) transition-smooth">{t("nav.contact")}</a></li>
+                            <li>
+                                <Link href="/services" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.services")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/gallery" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.gallery")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/about" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.about")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.contact")}
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
