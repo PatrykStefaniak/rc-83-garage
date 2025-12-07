@@ -49,18 +49,18 @@
             "description": "Przyjdź do nas na bezpłatną konsultację i wycenę",
             "address": {
                 "label": "Adres",
-                "street": "ul. Lakiernicza 123",
-                "city": "00-001 Warszawa, Polska"
+                "street": "Carrer Gremi de Boters, 40, Nord",
+                "city": "07009 Palma, Illes Balears, Hiszpania"
             },
             "contact": {
                 "label": "Kontakt",
-                "phone": "Telefon: +48 123 456 789",
+                "phone": "Telefon: +34 605 777 093",
                 "email": "Email: info@carpaintshop.com"
             },
             "hours": {
                 "label": "Godziny Otwarcia",
-                "weekdays": "Poniedziałek - Piątek: 8:00 - 18:00",
-                "saturday": "Sobota: 9:00 - 16:00",
+                "weekdays": "Poniedziałek - Piątek: 8:00 - 17:00",
+                "saturday": "Sobota: 9:00 - 13:00",
                 "sunday": "Niedziela: Zamknięte"
             }
         },
@@ -117,5 +117,47 @@
     "gallery": {
         "title": "Nasza Galeria",
         "description": "Poznaj nasze portfolio oszałamiających prac lakierniczych i profesjonalnych wykończeń samochodowych. Każdy projekt pokazuje nasze zaangażowanie w jakość i dbałość o szczegóły."
+    },
+    "contact": {
+        "title": "Skontaktuj się z Nami",
+        "description": "Skontaktuj się z nami, aby uzyskać bezpłatną wycenę lub zadać pytanie",
+        "form": {
+            "name": "Twoje Imię",
+            "namePlaceholder": "Wpisz swoje imię",
+            "phone": "Numer Telefonu",
+            "phonePlaceholder": "Wpisz swój numer telefonu",
+            "message": "Wiadomość",
+            "messagePlaceholder": "Jak możemy Ci pomóc?",
+            "submit": "Wyślij Wiadomość",
+            "sending": "Wysyłanie...",
+            "success": "Wiadomość wysłana pomyślnie!",
+            "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie."
+        },
+        "whatsapp": {
+            "title": "Czatuj na WhatsApp",
+            "description": "Szybka odpowiedź gwarantowana"
+        },
+        "info": {
+            "title": "Informacje Kontaktowe",
+            "address": {
+                "label": "Adres",
+                "street": "Carrer Gremi de Boters, 40, Nord",
+                "city": "07009 Palma, Illes Balears, Hiszpania"
+            },
+            "phone": {
+                "label": "Telefon",
+                "value": "+34 605 777 093"
+            },
+            "email": {
+                "label": "Email",
+                "value": "info@carpaintshop.com"
+            },
+            "hours": {
+                "label": "Godziny Pracy",
+                "weekdays": "Poniedziałek - Piątek: 8:00 - 17:00",
+                "saturday": "Sobota: 9:00 - 13:00",
+                "sunday": "Niedziela: Zamknięte"
+            }
+        }
     }
 }
