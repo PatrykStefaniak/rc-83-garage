@@ -6,14 +6,19 @@ import { Navbar } from "../ui/nav";
 import { Footer } from "../ui/footer";
 import { Loader2 } from "lucide-react";
 
-const images = [
-    { src: "/gallery/paintshop1.png", alt: "Paint Shop" },
-    { src: "/gallery/car1.png", alt: "Car 1" },
-    { src: "/gallery/car2.png", alt: "Car 2" },
-    { src: "/gallery/paintshop1.png", alt: "Paint Shop Work" },
-    { src: "/gallery/car1.png", alt: "Custom Paint" },
-    { src: "/gallery/car2.png", alt: "Restored Vehicle" },
-];
+const TOTAL_IMAGES = 19;
+const IMAGE_POSITIONS = new Array(TOTAL_IMAGES).fill(0).map((_, i) => i + 1).sort(() => Math.random() - 0.5);
+const BIG_INDEXES: number[] = [];
+
+let currentIndex = 0;
+
+while (currentIndex < TOTAL_IMAGES) {
+    BIG_INDEXES.push(currentIndex);
+
+    const length = BIG_INDEXES.length;
+
+    currentIndex += length % 2 === 0 ? 5 : 7;
+}
 
 export default function GalleryPage() {
     const { t, isLoading } = useLanguage();
@@ -24,7 +29,7 @@ export default function GalleryPage() {
                 <Loader2 className="w-10 h-10 animate-spin" />
             </div>
             <Navbar />
-            
+
             <main className="pt-16">
                 <section className="py-24 bg-(--bg-dark)">
                     <div className="container mx-auto px-4">
@@ -36,22 +41,24 @@ export default function GalleryPage() {
                                 {t("gallery.description")}
                             </p>
                         </div>
-                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                            {images.map((image, index) => (
-                                <GalleryImage
-                                    key={index}
-                                    src={image.src}
-                                    alt={image.alt}
-                                    className="aspect-square"
+                        <div className="grid gap-4 grid-cols-2 md:grid-cols-3 auto-rows-fr">
+                            {IMAGE_POSITIONS.map((imageIndex, index) => {
+                                const isLarge = BIG_INDEXES.includes(index);
+
+                                return <GalleryImage
+                                    key={imageIndex}
+                                    src={`/gallery/${imageIndex}.jpg`}
+                                    alt={`Gallery image ${imageIndex}`}
+                                    className={`aspect-square ${isLarge ? "col-span-2 row-span-2" : ""}`}
+                                    sizes={isLarge ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 50vw, 25vw"}
                                 />
-                            ))}
+                            })}
                         </div>
                     </div>
                 </section>
             </main>
-            
+
             <Footer />
         </div>
     );
 }
-

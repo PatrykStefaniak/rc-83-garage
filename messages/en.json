@@ -1,6 +1,6 @@
 {
     "nav": {
-        "brand": "Car Paintshop",
+        "brand": "RC 83 GARAGE",
         "home": "Home",
         "services": "Services",
         "testimonials": "Testimonials",
@@ -107,12 +107,12 @@
         }
     },
     "footer": {
-        "brand": "Car Paintshop",
+        "brand": "RC 83 GARAGE",
         "description": "Professional automotive paint services with over 15 years of experience. We're passionate about making your car look perfect.",
         "quickLinks": "Quick Links",
         "followUs": "Follow Us",
         "instagram": "Instagram",
-        "copyright": "© 2024 Car Paintshop. All rights reserved."
+        "copyright": "© 2024 RC 83 GARAGE. All rights reserved."
     },
     "gallery": {
         "title": "Our Gallery",

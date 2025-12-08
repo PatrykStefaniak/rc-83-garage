@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from "react";
 
-export default function useIntersectionObserver(ref: RefObject<HTMLElement | null>) {
+export default function useIntersectionObserver(ref: RefObject<HTMLElement | null>, once = false): boolean {
     const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
@@ -9,7 +9,15 @@ export default function useIntersectionObserver(ref: RefObject<HTMLElement | nul
         }
 
         const observer = new IntersectionObserver(
-            ([entry]) => setIsInView(entry.isIntersecting),
+            ([entry]) => {
+                const isIntersecting = entry.isIntersecting;
+
+                setIsInView(isIntersecting);
+
+                if (isIntersecting && once) {
+                    observer.disconnect();
+                }
+            },
             { threshold: 0 }
         );
 
@@ -18,7 +26,7 @@ export default function useIntersectionObserver(ref: RefObject<HTMLElement | nul
         return () => {
             observer.disconnect();
         }
-    }, [ref]);
+    }, [ref, once]);
 
     return isInView;
 }

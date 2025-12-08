@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/providers/language-provider";
+import Logo from "./logo";
 
 export const Footer = () => {
     const { t } = useLanguage();
@@ -13,9 +14,7 @@ export const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     <div className="col-span-2">
                         <div className="flex items-center space-x-2 mb-4">
-                            <div className="w-10 h-10 bg-(--primary) rounded-lg flex items-center justify-center">
-                                <span className="text-(--text) font-bold text-lg">CP</span>
-                            </div>
+                            <Logo />
                             <span className="text-xl font-bold">{t("footer.brand")}</span>
                         </div>
                         <p className="max-w-md">

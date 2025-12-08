@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RC 86 Garage",
-  description: "RC 86 Garage",
+  title: "RC 83 GARAGE",
+  description: "RC 83 GARAGE - Professional Automotive Paint Services",
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({

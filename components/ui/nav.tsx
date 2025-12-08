@@ -1,15 +1,29 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/providers/language-provider";
 import { ThemeToggle } from "./theme-toggle";
 import { LanguageSwitcher } from "./language-switcher";
 import Link from "next/link";
+import Logo from "./logo";
 
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const { t } = useLanguage();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const navItems = [
         { label: t("nav.home"), href: "/" },
@@ -21,15 +35,15 @@ export const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-(--bg)/80 backdrop-blur-lg border-b border-(--border-light)">
+        <nav className={`fixed top-0 left-0 right-0 z-50 bg-(--bg)/80 backdrop-blur-lg border-b border-(--border-light) transition-all duration-300 ${scrolled ? "py-0" : "py-3"}`}>
             <div className="container mx-auto px-4">
-                <div className="flex items-center justify-between h-16">
+                <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16" : "h-24"}`}>
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 group">
-                        <div className="w-10 h-10 bg-(--primary) rounded-lg flex items-center justify-center shadow-glow transition-smooth group-hover:scale-110">
-                            <span className="text-(--text) font-bold text-lg">CP</span>
+                        <div className={`transition-all duration-300 ${scrolled ? "scale-75" : "scale-150 mr-6"}`}>
+                            <Logo />
                         </div>
-                        <span className="text-xl font-bold text-(--text) hidden sm:inline">
+                        <span className={`font-bold text-(--text) hidden sm:inline transition-all duration-300 ${scrolled ? "text-xl" : "text-2xl"}`}>
                             {t("nav.brand")}
                         </span>
                     </Link>
@@ -40,7 +54,7 @@ export const Navbar = () => {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="px-4 py-2 rounded-lg text-(--text) hover:bg-(--highlight) transition-smooth font-medium"
+                                className="px-4 py-2 rounded-lg text-(--text) hover:bg-(--highlight) transition-colors duration-300 font-medium"
                             >
                                 {item.label}
                             </Link>
@@ -73,7 +87,7 @@ export const Navbar = () => {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="block px-4 py-3 rounded-lg text-(--text) hover:bg-(--highlight) transition-smooth font-medium"
+                                className="block px-4 py-3 rounded-lg text-(--text) hover:bg-(--highlight) transition-colors duration-300 font-medium"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.label}

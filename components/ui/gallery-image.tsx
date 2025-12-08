@@ -18,7 +18,7 @@ export function GalleryImage({
     sizes = "(max-width: 768px) 100vw, 33vw"
 }: GalleryImageProps) {
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useIntersectionObserver(ref);
+    const isInView = useIntersectionObserver(ref, true);
 
     return (
         <div
