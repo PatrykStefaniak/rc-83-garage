@@ -14,11 +14,10 @@ export default function AboutPage() {
                 <Loader2 className="w-10 h-10 animate-spin" />
             </div>
             <Navbar />
-            <main className="pt-24 min-h-screen flex items-center justify-center">
+            <main className="pt-36 min-h-screen flex items-center justify-center">
                 <h1 className="text-4xl font-bold text-(--text-dark)">About Page - Coming Soon</h1>
             </main>
             <Footer />
         </div>
     );
 }
-

@@ -8,7 +8,7 @@ export const Hero = () => {
     const { t } = useLanguage();
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center py-20">
+        <section id="home" className="relative min-h-screen flex items-center pt-36 pb-20">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image

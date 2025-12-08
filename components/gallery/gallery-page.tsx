@@ -30,7 +30,7 @@ export default function GalleryPage() {
             </div>
             <Navbar />
 
-            <main className="pt-16">
+            <main className="pt-36">
                 <section className="py-24 bg-(--bg-dark)">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col items-center text-center mb-16 gap-4">

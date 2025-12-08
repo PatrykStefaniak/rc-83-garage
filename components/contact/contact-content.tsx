@@ -20,7 +20,7 @@ export const ContactContent = () => {
                 <Loader2 className="w-10 h-10 animate-spin" />
             </div>
             <Navbar />
-            <main className="pt-24 pb-16 bg-(--bg)">
+            <main className="pt-36 pb-16 bg-(--bg)">
                 <div className="container mx-auto px-4">
                     {/* Header */}
                     <div className="text-center mb-16">
