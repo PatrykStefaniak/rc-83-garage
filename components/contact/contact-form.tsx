@@ -101,7 +101,7 @@ export const ContactForm = () => {
             <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full py-4 bg-(--primary) hover:bg-(--primary)/80 text-(--bg-dark) font-semibold rounded-lg transition-smooth flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-(--primary) hover:bg-(--primary)/80 text-(--bg-dark) font-semibold rounded-lg transition-smooth flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
             >
                 {status === "sending" ? (
                     <>
