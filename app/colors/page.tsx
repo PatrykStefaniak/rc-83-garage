@@ -1,12 +1,12 @@
 import { Navbar } from "@/components/ui/nav";
 import { Footer } from "@/components/ui/footer";
-import { ServicesContent } from "@/components/services/services-content";
+import { ColorsContent } from "@/components/colors/colors-content";
 
-export default function ServicesPage() {
+export default function ColorsPage() {
     return (
         <div className="min-h-screen">
             <Navbar />
-            <ServicesContent />
+            <ColorsContent />
             <Footer />
         </div>
     );

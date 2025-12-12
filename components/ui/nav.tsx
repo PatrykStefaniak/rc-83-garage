@@ -28,9 +28,8 @@ export const Navbar = () => {
     const navItems = [
         { label: t("nav.home"), href: "/" },
         { label: t("nav.services"), href: "/services" },
-        { label: t("nav.testimonials"), href: "/testimonials" },
+        { label: t("nav.colors"), href: "/colors" },
         { label: t("nav.gallery"), href: "/gallery" },
-        { label: t("nav.about"), href: "/about" },
         { label: t("nav.contact"), href: "/contact" },
     ];
 
