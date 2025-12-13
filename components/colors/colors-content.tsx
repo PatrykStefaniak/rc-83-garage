@@ -79,7 +79,7 @@ export const ColorsContent = () => {
                 </div>
 
                 {/* 3D Canvas */}
-                <div className="mx-auto w-[50vw] h-[calc(100vh-18rem)]">
+                <div className="mx-auto w-full lg:w-[50vw] h-[calc(100vh-18rem)]">
                     <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
                         <Suspense fallback={null}>
                             <ambientLight intensity={.75} />
