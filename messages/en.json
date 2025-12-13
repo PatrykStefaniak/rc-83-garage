@@ -158,5 +158,33 @@
                 "sunday": "Sunday: Closed"
             }
         }
+    },
+    "colors": {
+        "title": "Find Your Perfect Color",
+        "description": "Browse our extensive range of automotive paint colors and finishes. From classic solids to shimmering metallics and bold mattes, we offer premium options to bring your vision to life. Use our interactive preview to see how different finishes catch the light, then contact us for a custom quote.",
+        "paintType": "Paint Type",
+        "color": "Color",
+        "paintTypes": {
+            "solid": "Solid/Single-Stage Paint",
+            "metallic": "Metallic Paint",
+            "pearlescent": "Pearlescent/Pearl",
+            "matte": "Matte/Satin",
+            "glossy": "Glossy/High-Gloss",
+            "chrome": "Chrome/Mirror",
+            "candy": "Candy/Translucent",
+            "chameleon": "Color-Shift/Chameleon"
+        },
+        "colors": {
+            "red": "Red",
+            "blue": "Blue",
+            "green": "Green",
+            "yellow": "Yellow",
+            "orange": "Orange",
+            "purple": "Purple",
+            "white": "White",
+            "black": "Black",
+            "silver": "Silver",
+            "gold": "Gold"
+        }
     }
 }

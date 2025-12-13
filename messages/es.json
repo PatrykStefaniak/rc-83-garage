@@ -158,5 +158,33 @@
                 "sunday": "Domingo: Cerrado"
             }
         }
+    },
+    "colors": {
+        "title": "Encuentra Tu Color Perfecto",
+        "description": "Explora nuestra amplia gama de colores y acabados de pintura automotriz. Desde sólidos clásicos hasta metálicos brillantes y mates audaces, ofrecemos opciones premium para dar vida a tu visión. Usa nuestra vista previa interactiva para ver cómo los diferentes acabados capturan la luz, luego contáctanos para una cotización personalizada.",
+        "paintType": "Tipo de Pintura",
+        "color": "Color",
+        "paintTypes": {
+            "solid": "Pintura Sólida/Monocapa",
+            "metallic": "Pintura Metálica",
+            "pearlescent": "Perlado/Nacarado",
+            "matte": "Mate/Satinado",
+            "glossy": "Brillante/Alto Brillo",
+            "chrome": "Cromado/Espejo",
+            "candy": "Candy/Translúcido",
+            "chameleon": "Camaleón/Cambio de Color"
+        },
+        "colors": {
+            "red": "Rojo",
+            "blue": "Azul",
+            "green": "Verde",
+            "yellow": "Amarillo",
+            "orange": "Naranja",
+            "purple": "Morado",
+            "white": "Blanco",
+            "black": "Negro",
+            "silver": "Plateado",
+            "gold": "Dorado"
+        }
     }
 }

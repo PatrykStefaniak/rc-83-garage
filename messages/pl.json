@@ -158,5 +158,33 @@
                 "sunday": "Niedziela: Zamknięte"
             }
         }
+    },
+    "colors": {
+        "title": "Znajdź Swój Idealny Kolor",
+        "description": "Przeglądaj naszą szeroką gamę kolorów i wykończeń lakierniczych. Od klasycznych jednolitych po lśniące metaliki i odważne matowe, oferujemy opcje premium, które ożywią Twoją wizję. Użyj naszego interaktywnego podglądu, aby zobaczyć, jak różne wykończenia łapią światło, a następnie skontaktuj się z nami po spersonalizowaną wycenę.",
+        "paintType": "Rodzaj Lakieru",
+        "color": "Kolor",
+        "paintTypes": {
+            "solid": "Lakier Jednolity/Jednowarstwowy",
+            "metallic": "Lakier Metaliczny",
+            "pearlescent": "Perłowy/Opalizujący",
+            "matte": "Matowy/Satynowy",
+            "glossy": "Błyszczący/Wysoki Połysk",
+            "chrome": "Chromowany/Lustrzany",
+            "candy": "Candy/Półprzezroczysty",
+            "chameleon": "Kameleon/Zmieniający Kolor"
+        },
+        "colors": {
+            "red": "Czerwony",
+            "blue": "Niebieski",
+            "green": "Zielony",
+            "yellow": "Żółty",
+            "orange": "Pomarańczowy",
+            "purple": "Fioletowy",
+            "white": "Biały",
+            "black": "Czarny",
+            "silver": "Srebrny",
+            "gold": "Złoty"
+        }
     }
 }
