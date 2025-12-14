@@ -43,7 +43,7 @@ export function Gallery() {
                         {t("home.gallery.description")}
                     </p>
                 </div>
-                <div className="grid gap-4 grid-cols-2 md:grid-cols-4 auto-rows-fr">
+                <div className="grid gap-4 grid-cols-2 md:grid-cols-3 auto-rows-fr">
                     {homeGalleryItems.map((image, index) => (
                         <GalleryImage
                             key={index}

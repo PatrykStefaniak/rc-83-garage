@@ -1,16 +1,14 @@
 "use client";
 
 import { useLanguage } from "@/providers/language-provider";
-import { Loader2 } from "lucide-react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Suspense, useState } from "react";
-import { PaintModel } from "./paint-model";
+import { useState } from "react";
 import { PAINT_TYPES, COLORS } from "./paint-config";
+import { PageWrapper } from "../ui/page-wrapper";
+import ModelCanvas from "./model-canvas";
 
 export const ColorsContent = () => {
-    const { isLoading, t } = useLanguage();
-    const [selectedPaintType, setSelectedPaintType] = useState(PAINT_TYPES[0].id);
+    const { t } = useLanguage();
+    const [selectedPaintType, setSelectedPaintType] = useState(PAINT_TYPES[1].id);
     const [selectedColor, setSelectedColor] = useState(COLORS[0].id);
 
     const currentPaintType = PAINT_TYPES.find(pt => pt.id === selectedPaintType) || PAINT_TYPES[0];
@@ -23,13 +21,10 @@ export const ColorsContent = () => {
     };
 
     return (
-        <div className="min-h-screen">
-            <div className={`${isLoading ? "opacity-100" : "opacity-0"} transition-opacity duration-700 flex items-center justify-center h-screen bg-(--bg) fixed inset-0 z-100 pointer-events-none`}>
-                <Loader2 className="w-10 h-10 animate-spin" />
-            </div>
+        <PageWrapper>
             <main className="pt-36 min-h-screen">
                 {/* Header Section */}
-                <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
+                <div className="max-w-7xl mx-auto px-6 my-12 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-(--text)">
                         {t("colors.title")}
                     </h1>
@@ -79,39 +74,11 @@ export const ColorsContent = () => {
                 </div>
 
                 {/* 3D Canvas */}
-                <div className="mx-auto w-full lg:w-[50vw] h-[calc(100vh-18rem)]">
-                    <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
-                        <Suspense fallback={null}>
-                            <ambientLight intensity={.75} />
-                            <directionalLight
-                                position={[0, 4, 4]}
-                                intensity={.5}
-                            />
-                            <directionalLight
-                                position={[4, 4, 0]}
-                                intensity={.5}
-                            />
-                            <directionalLight
-                                position={[0, -4, -4]}
-                                intensity={.5}
-                            />
-                            <directionalLight
-                                position={[-4, -4, 0]}
-                                intensity={.5}
-                            />
-                            <PaintModel paintConfig={paintConfig} />
-                            <OrbitControls
-                                enablePan={true}
-                                enableZoom={true}
-                                enableRotate={true}
-                                minDistance={2}
-                                maxDistance={10}
-                            />
-                        </Suspense>
-                    </Canvas>
+                <div className="mx-auto w-full lg:w-[50vw] h-[calc(100vh-18rem)] border-2 border-(--border) rounded-lg box-shadow-lg ">
+                    <ModelCanvas paintConfig={paintConfig} />
                 </div>
             </main>
-        </div>
+        </PageWrapper>
     );
 };
 

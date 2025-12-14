@@ -26,18 +26,23 @@ export const Footer = () => {
                         <h3 className="font-bold mb-4">{t("footer.quickLinks")}</h3>
                         <ul className="space-y-2">
                             <li>
+                                <Link href="/" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.home")}
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/services" className="hover:text-(--primary) transition-smooth">
                                     {t("nav.services")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/gallery" className="hover:text-(--primary) transition-smooth">
-                                    {t("nav.gallery")}
+                                <Link href="/colors" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.colors")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="hover:text-(--primary) transition-smooth">
-                                    {t("nav.about")}
+                                <Link href="/gallery" className="hover:text-(--primary) transition-smooth">
+                                    {t("nav.gallery")}
                                 </Link>
                             </li>
                             <li>

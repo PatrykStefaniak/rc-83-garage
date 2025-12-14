@@ -1,13 +1,5 @@
-import { Navbar } from "@/components/ui/nav";
-import { Footer } from "@/components/ui/footer";
 import { ServicesContent } from "@/components/services/services-content";
 
 export default function ServicesPage() {
-    return (
-        <div className="min-h-screen">
-            <Navbar />
-            <ServicesContent />
-            <Footer />
-        </div>
-    );
+    return <ServicesContent />;
 }

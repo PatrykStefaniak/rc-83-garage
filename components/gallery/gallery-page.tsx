@@ -2,9 +2,7 @@
 
 import { useLanguage } from "@/providers/language-provider";
 import { GalleryImage } from "../ui/gallery-image";
-import { Navbar } from "../ui/nav";
-import { Footer } from "../ui/footer";
-import { Loader2 } from "lucide-react";
+import { PageWrapper } from "../ui/page-wrapper";
 
 const TOTAL_IMAGES = 19;
 const IMAGE_POSITIONS = new Array(TOTAL_IMAGES).fill(0).map((_, i) => i + 1).sort(() => Math.random() - 0.5);
@@ -21,15 +19,10 @@ while (currentIndex < TOTAL_IMAGES) {
 }
 
 export default function GalleryPage() {
-    const { t, isLoading } = useLanguage();
+    const { t } = useLanguage();
 
     return (
-        <div className="min-h-screen">
-            <div className={`${isLoading ? "opacity-100" : "opacity-0"} transition-opacity duration-700 flex items-center justify-center h-screen bg-(--bg) fixed inset-0 z-100 pointer-events-none`}>
-                <Loader2 className="w-10 h-10 animate-spin" />
-            </div>
-            <Navbar />
-
+        <PageWrapper>
             <main className="pt-36">
                 <section className="py-24 bg-(--bg-dark)">
                     <div className="container mx-auto px-4">
@@ -57,8 +50,6 @@ export default function GalleryPage() {
                     </div>
                 </section>
             </main>
-
-            <Footer />
-        </div>
+        </PageWrapper>
     );
 }

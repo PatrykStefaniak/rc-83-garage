@@ -1,25 +1,20 @@
 "use client";
 
-import { Navbar } from "@/components/ui/nav";
-import { Footer } from "@/components/ui/footer";
+import { PageWrapper } from "@/components/ui/page-wrapper";
 import { ContactForm } from "@/components/contact/contact-form";
 import { GoogleMap } from "@/components/ui/google-map";
 import { InfoPanel } from "@/components/ui/info-panel";
 import { useLanguage } from "@/providers/language-provider";
-import { Loader2, MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 const PHONE_NUMBER = "+34605777093";
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}`;
 
 export const ContactContent = () => {
-    const { isLoading, t } = useLanguage();
+    const { t } = useLanguage();
 
     return (
-        <div className="min-h-screen">
-            <div className={`${isLoading ? "opacity-100" : "opacity-0"} transition-opacity duration-700 flex items-center justify-center h-screen bg-(--bg) fixed inset-0 z-100 pointer-events-none`}>
-                <Loader2 className="w-10 h-10 animate-spin" />
-            </div>
-            <Navbar />
+        <PageWrapper>
             <main className="pt-36 pb-16 bg-(--bg)">
                 <div className="container mx-auto px-4">
                     {/* Header */}
@@ -97,7 +92,6 @@ export const ContactContent = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
-        </div>
+        </PageWrapper>
     );
 };
